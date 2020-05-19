@@ -96,7 +96,7 @@ class ASTDefinitionBuilder
     private function getDescription($node)
     {
         if ($node->description) {
-            return $node->description;
+            return $node->description->value;
         }
         if (isset($this->options['commentDescriptions'])) {
             $rawValue = $this->getLeadingCommentBlock($node);
